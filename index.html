@@ -1,0 +1,93 @@
+<html lang="en">
+    <head >
+        <title>index</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="./design.css">
+    </head>
+    <body style="background-color: rgb(196, 237, 238);">
+       
+       <div class="container">
+
+           <div class="row">
+               <div class="col">
+                   <img class="img-fluid" width=200 height=64 src="./grapecityLogo.png" alt="not available"> 
+                   <small style="font-style: italic;"><b style="text-shadow: 1px 1px 10px rgb(146, 9, 9); text-decoration: underline;">TIP CALCULATOR </b> Assignment by <b style="font-size: medium;"> VIKANT BHATI </b> </small>  
+               </div>
+           </div>
+
+           <div class="cal">
+               <div class="row">
+               <!-- input column -->
+                   <div class="col-5">
+                       <!-- bill amount  -->
+                       <div class="form-group label">
+                            <label for="bill">BiLL</label>
+                            <input type="text" class="form-control" onchange="calculate()" name="bill" id="bill" value="0.00">
+                       </div>
+             
+                       <!-- tip percentage -->
+                       <div class=" label">
+                        <label for="tip">Tip %</label> 
+                        <div class="row">
+                            <div class="col-4">
+                                <button style="width:100%" onclick="setTipDec()" >-</button>
+                            </div> 
+                                <div class="col-4">
+                                 <input class="" style="width:200% ; position: relative; margin-left: -20px;" onchange="calculate()" type="text" class="" name="tip" id="tip" value="0">
+                                </div>
+                                <div class="col-4">
+                                <button style="width:100%;" onclick="setTipInc()" >+</button>
+                                </div> 
+                            
+                        </div>   
+                    </div>
+                    <!-- number of people -->
+                    <div class="form-group label">
+                        <label for="people">Number of People</label> 
+                        <div class="row">
+                            <div class="col-4">
+                                <button style="width:100%" onclick="setPeopleDec()" >-</button>
+                            </div>
+                             <div class="col-4">
+                                 <input style="width:200% ; position: relative; margin-left: -20px;" onchange="calculate()" type="text" class="" name="people" id="people" value="1">
+                             </div>
+                            <div class="col-4">
+                                <button style="width:100%"  onclick="setPeopleInc()">+</button>
+                            </div>
+                        </div>   
+                    </div>
+
+                   </div>
+                 <!-- output column -->
+                   <div class="col-7">
+                      <div class="row output">
+                          <div class="col"><b>Tip</b> <br> per person</div>
+                          <div class="col">
+                            <p class="input" id="tipp">$0.00</p>
+                          </div>
+                      </div>
+                      <div class="row output">
+                        <div class="col"><b>Total</b> <br> per person</div>
+                        <div class="col">
+                            <p class="input" id="total">$0.00</p>
+                        </div>
+                    </div>
+                   </div>
+                  
+               </div> 
+               <!-- button to calculate -->
+               <div class="row">
+                   <div class="col-6">
+                       <button id="calculate" onclick="calculate()">C A L C U L A T E</button>
+                   </div>
+               </div>
+            </div>
+       </div>
+
+ <script src="./javaScript.js"></script>
+
+</body>
+</html>
