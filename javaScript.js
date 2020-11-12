@@ -11,11 +11,14 @@ function calculate(){
       document.getElementById("tip").value=tip;
 
     // fetch number of people
-    var people=Math.abs(Number(getPeople()));
+    var people=Math.abs(parseInt(getPeople()));
       document.getElementById("people").value=people;
      
-      if(people==0)
+      if(people==0){
+         document.getElementById("tipp").innerHTML="Error ! number of people can't be zero";  
+         document.getElementById("total").innerHTML="";
        return ; 
+      }
     var totaltip= (bill*tip)/100 ;
     var totalmoney= totaltip+bill;
 
